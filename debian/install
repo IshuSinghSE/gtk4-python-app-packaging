@@ -1,0 +1,4 @@
+idgaf usr/lib/python3/dist-packages
+scripts/idgaf usr/bin
+data/idgaf.desktop usr/share/applications
+data/icons/hicolor/48x48/apps/idgaf.svg usr/share/icons/hicolor/48x48/apps

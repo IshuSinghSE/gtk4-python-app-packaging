@@ -1,0 +1,12 @@
+Source: idgaf
+Section: utils
+Priority: optional
+Maintainer: IshuSinghSE <ishu.111636@yahoo.com>
+Build-Depends: debhelper-compat (= 13), python3-all, python3-gi, dh-python
+Standards-Version: 4.6.0
+Homepage: https://example.invalid/
+
+Package: idgaf
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: tiny test GTK app, A small test application to validate packaging.
