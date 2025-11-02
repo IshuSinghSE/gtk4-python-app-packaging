@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Installer logs
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Debian packaging build artifacts
+debian/idgaf/
+debian/*.debhelper
+debian/*.substvars
+debian/files
+debian/debhelper-build-stamp
+.debhelper/
+
+# Built Debian packages and changes
+idgaf_*.deb
+*.changes
+*.buildinfo
+*.deb
+
+# Meson/obj build dirs
+obj-*/
+meson-logs/
+
+# Temporary packaging dirs used earlier
+idgaf_deb/
