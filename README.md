@@ -1,6 +1,8 @@
-# idgaf - test GTK packaging
+# idgaf - test GTK + Python app packaging
 
 This is a tiny test project to verify packaging a GTK Python app and producing a .deb package.
+
+**Repository:** [https://github.com/IshuSinghSE/gtk4-python-app-packaging](https://github.com/IshuSinghSE/gtk4-python-app-packaging)
 
 ## Project layout and purpose
 
@@ -41,12 +43,11 @@ sudo apt install -y meson ninja-build
 
 ### 1) Setup project (clone / prepare)
 
-If you haven't already cloned the repo:
+Clone the repository:
 
 ```bash
-git clone <repo-url> mydir && cd mydir
-# or if already in repo root
-cd /home/ashu/Code/linux/fuck_deploy
+git clone https://github.com/IshuSinghSE/gtk4-python-app-packaging.git
+cd gtk4-python-app-packaging
 ```
 
 Install a virtualenv to test locally (optional but recommended):
@@ -64,9 +65,8 @@ Option A — Debian binary package (recommended for installable .deb):
 
 ```bash
 # build a binary .deb using debhelper (this repo ships packaging metadata)
-cd /home/ashu/Code/linux/fuck_deploy
 dpkg-buildpackage -b -us -uc
-# resulting .deb will be in the parent directory (/home/ashu/Code/linux)
+# resulting .deb will be in the parent directory
 ```
 
 Option B — Meson upstream build (if you want upstream artifacts)
@@ -82,7 +82,7 @@ meson install -C builddir --destdir=$PWD/_install
 Install the produced .deb (binary package):
 
 ```bash
-sudo dpkg -i /home/ashu/Code/linux/idgaf_0.1.0_all.deb
+sudo dpkg -i ../idgaf_0.1.0_all.deb
 sudo apt-get install -f   # fix any missing dependencies
 ```
 
@@ -124,7 +124,6 @@ sudo dpkg -P idgaf
 Remove build artifacts and generated debian files from the working tree:
 
 ```bash
-cd /home/ashu/Code/linux/fuck_deploy
 debian/rules clean
 rm -rf builddir _install obj-* idgaf_deb
 rm -f ../idgaf_*.deb ../idgaf_*.changes ../idgaf_*.buildinfo
